@@ -15,8 +15,11 @@ class SearchBruhTest(unittest.TestCase):
     
     def test_search_bruh(self):
         wd = self.wd
+        #Open home page
         wd.get("https://www.google.com/search?q=bruh+meme&rlz=1C1GCEA_enRU956RU956&oq=bruh+meme&aqs=chrome..69i57j0l9.2039j0j7&sourceid=chrome&ie=UTF-8")
+        #Open google images
         wd.find_element_by_link_text(u"Картинки").click()
+        #Watching images
         wd.find_element_by_xpath(u"//img[@alt='Брух — Что это значит? Мемы | AntiSlang.ru']").click()
         wd.find_element_by_xpath("//img[@alt='BRUH MEMES (@BRUH64122310) | Twitter']").click()
         wd.find_element_by_xpath("//img[@alt='Like bruh: memes']").click()
